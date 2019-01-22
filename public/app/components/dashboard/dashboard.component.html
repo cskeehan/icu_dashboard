@@ -1,0 +1,74 @@
+<!-- HTML layout of the ICU mashup webpage. -->
+<div id="CurrentSelections" class='selections'>
+
+</div>
+
+    <div class="qlik-filter-container"></div>
+    <div class="filter-container">
+        <div class="dropdown-container">
+            <div class="dropdown-button noselect semi-square">
+                <div class="dropdown-label">Department Group</div>
+                <i class="fa fa-filter"></i>
+            </div>
+            <div class="dropdown-list department-filter">
+                <ul>
+                    <li ng-repeat="option in cf.depOptions">
+                        <div name="{{option.name}}" class="{{option.state}}" ng-click="cf.changeSel('Department Group', option)">{{option.name}}</div>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="dropdown-container">
+            <div class="dropdown-button noselect semi-square">
+                <div class="dropdown-label">Month-Year</div>
+                <i class="fa fa-filter"></i>
+            </div>
+            <div class="dropdown-list year-filter">
+                <ul>
+                    <li ng-repeat="option in cf.yearOptions">
+                        <div name="{{option.name}}" class="{{option.state}}" ng-click="cf.changeSel('MonthYear', option)">{{option.name}}</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="dropdown-container">
+            <div class="dropdown-button noselect semi-square" id="ClearAll">
+                <div class="dropdown-label">Clear</div>
+                <i class="fa fa-refresh"></i>
+            </div>
+        </div>
+    </div>
+    <div class="kpi-container">
+        <div class="kpi" id="daily-admissions">
+        </div>
+        <div class="kpi" id="icu-mortalities">
+        </div>
+        <div class="kpi" id="patient-hyp">
+        </div>
+        <div class="kpi" id="readmissions">
+        </div>
+    </div>
+    <div class="kpi-container">
+        <div class="kpi" id="unplanned">
+        </div>
+        <div class="kpi" id="extubations">
+        </div>
+        <div class="kpi" id="vap">
+        </div>
+        <div class="kpi" id="central-line">
+        </div>
+    </div>
+    <div class="kpi-container">
+        <!-- <div class="qlik-filter-container"> -->
+            <div class="qlik-filter" id="filter"></div>
+        <!-- </div> -->
+    </div>
+    <!-- <div style="height:35px; width:400px;" id="filter2"></div> -->
+    <div class="kpi-container">
+        <div class="pie-container">
+            <div class="pie" id="vte">
+            </div>
+        </div>
+    </div>
+
